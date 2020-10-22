@@ -1,0 +1,15 @@
+<%= form_with(model: @kitten, method: "post") do |f| %>
+  <%= f.label "Name:" %>
+  <%= f.text_field :name %>
+
+  <%= f.label "Age:" %>
+  <%= f.number_field :age, in: 1..50, step: 1, value: 1 %>
+
+  <%= f.label "Cuteness:" %>
+  <%= f.number_field :cuteness, in: 1..10, step: 1, value: 1 %>
+
+  <%= f.label "Softness:" %>
+  <%= f.number_field :softness, in: 1..10, step: 1, value: 1 %>
+
+  <%= f.submit "Submit" %>
+<% end %>
